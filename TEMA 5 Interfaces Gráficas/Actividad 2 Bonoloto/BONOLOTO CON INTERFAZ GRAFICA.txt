@@ -1,0 +1,14 @@
+BONOLOTO CON INTERFAZA GRAFICA
+
+- Clase Generapremios
+
+Atribs = Primerpremio, Premiocomplementario, Reintegro
+
+Metod = Generapremio1, Generapremio2, GeneraReintegro
+
+
+- Clase Compruebapremios (Hereda de generapremios)
+
+Instancia de Generapremios
+Metod = Checkprimerpremio, Chekcomplementario, Checkreintegro
+
