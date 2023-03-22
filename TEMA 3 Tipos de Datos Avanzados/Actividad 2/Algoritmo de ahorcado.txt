@@ -1,0 +1,47 @@
+import java.util.Scanner;
+
+public class Hangman {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        String wordToGuess = "palabra";
+        String hiddenWord = "";
+        int guessesLeft = 6;
+        boolean wordGuessed = false;
+
+        for (int i = 0; i < wordToGuess.length(); i++) {
+            hiddenWord += "_";
+        }
+
+        while (guessesLeft > 0 && !wordGuessed) {
+            System.out.println("Palabra oculta: " + hiddenWord);
+            System.out.println("Adivina una letra:");
+            String guess = scanner.nextLine();
+            boolean correctGuess = false;
+
+            for (int i = 0; i < wordToGuess.length(); i++) {
+                if (wordToGuess.charAt(i) == guess.charAt(0)) {
+                    char[] hiddenWordArray = hiddenWord.toCharArray();
+                    hiddenWordArray[i] = guess.charAt(0);
+                    hiddenWord = new String(hiddenWordArray);
+                    correctGuess = true;
+                }
+            }
+
+            if (!correctGuess) {
+                guessesLeft--;
+                System.out.println("La letra no se encuentra en la palabra. Te quedan " + guessesLeft + " intentos.");
+            }
+
+            if (!hiddenWord.contains("_")) {
+                wordGuessed = true;
+                System.out.println("¡Felicidades, adivinaste la palabra! La palabra era " + wordToGuess);
+            }
+        }
+
+        if (!wordGuessed) {
+            System.out.println("¡Perdiste! La palabra era " + wordToGuest);
+        }
+    }
+}

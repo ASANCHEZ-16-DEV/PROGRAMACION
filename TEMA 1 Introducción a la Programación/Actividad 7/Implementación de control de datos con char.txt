@@ -1,0 +1,7 @@
+boolean controldatos=true;
+
+while(controldatos){
+    if ((categoria != 'A' ||  categoria !='B' || categoria !='C' || categoria !='S' || categoria !='F')){
+     System.out.println("Debe introducir clasificaciones energeticas o finalización de programa");
+     controldatos=false;
+    }

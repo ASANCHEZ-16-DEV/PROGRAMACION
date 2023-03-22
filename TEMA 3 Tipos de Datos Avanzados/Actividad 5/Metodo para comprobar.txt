@@ -1,0 +1,8 @@
+  //Método para comprobar si ha ganado la primera apuesta
+    private static int comprobar (ArrayList<String> lista) { //Método para comprobar los números ganadores con la primera apuesta
+        
+        Generarapuesta1();
+        
+
+        return 0;
+    }

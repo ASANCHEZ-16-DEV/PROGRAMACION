@@ -1,0 +1,14 @@
+int newcountabmayorescurva = (countabonadosmayorescurva+15)-countabonadosmayorescurva;
+
+int newcountnoabmayoresnaciente = (countnoabonadosmayoresnaciente+20)-countnoabonadosmayoresnaciente;
+int newcountnoabmenoresnaciente = (countnoabonadosmenoresnaciente+5)-countnoabonadosmenoresnaciente;
+
+int newcountnoabmayorescurva = (countnoabonadosmayorescurva+28)-countnoabonadosmayorescurva;
+int newcountnoabmenorescurva = (countnoabonadosmenorescurva+10)-countnoabonadosmenorescurva;
+
+System.out.println(newcountabmayorescurva);
+
+
+int entradasmenores = countabonadosmenoresnaciente + countabonadosmenorescurva + countnoabonadosmenorescurva + countnoabonadosmenoresnaciente;
+System.out.println("Las entradas totales vendidas a menores de edad han sido " + entradasmenores );
+

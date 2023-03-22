@@ -1,0 +1,44 @@
+    Scanner sc = new Scanner(System.in);
+    boolean repeat = true;
+    boolean repeat2 = true;
+    boolean repeat3 = true;
+    int counter1= 0;
+    
+    
+//Intentar implementar vectores a la hora de introducir los números y mostrarlos entre corchetes
+
+    System.out.println("Primera apuesta: Introduzca números del 1 al 49");    
+
+    while (repeat){     //Solicitud de la primera apuesta
+
+  //Introducción de apuesta y muestra al usuario 
+          ArrayList<String> lista = new ArrayList<String>();
+          int inputapuesta1INT=0;
+
+  //Se añade el número de apuesta al arraylist
+          for (int i = 0; i < 6; i++) {
+              inputapuesta1INT = sc.nextInt(); 
+
+              if(inputapuesta1INT>49 || inputapuesta1INT<1){
+                System.out.println("Error: El número introducido es menor a 1 o mayor al 49, repita la introducción");
+                continue;   //Si el valor es mayor a 49 o menor a 1 se repite el bucle 
+             }
+                
+
+            String inputapuesta1STR = Integer.toString(inputapuesta1INT);
+              lista.add(0,inputapuesta1STR);
+          }
+
+        System.out.println("Tus numeros apostados son: ");
+
+        for(int i=0; i<lista.size();i++){
+            System.out.print("["+lista.get(i)+"]");
+        }
+
+        
+        if(lista.size()==6){
+            repeat=false;
+        }
+
+}
+        
